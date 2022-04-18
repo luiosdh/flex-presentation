@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../public/scripts/flex-script.js"></script>
+    <script src="../public/scripts/websocket.js"></script>
+    <script src="../public/scripts/sidebar.js"></script>
+
+    <title>flex-container</title>
+</head>
+
+<body>
+    <header>
+
+        <ul class="header">
+            <button class="burger-sidebar"><i class="fa fa-bars"></i></button>
+            <li><a href="../index.html">flex-home</a></li>
+            <li><a href="/views/slide-1.html">flex-container</a></li>
+            <li><a href="/views/slide-2.html">ejes en Flexbox</a></li>
+            <li><a href="/views/slide-3.html">flex-direction</a></li>
+            <li><a href="/views/slide-4.html">flex-wrap</a></li>
+            <li><a href="/views/slide-5.html">justify-content</a></li>
+            <li><a href="/views/slide-6.html">align-items</a></li>
+            <li><a href="/views/slide-7.html">flex-items</a></li>
+            <li><a href="/views/slide-8.html">flex-grow</a></li>
+            <li><a href="/views/slide-9.html">align-self</a></li>
+        </ul>
+
+    </header>
+    <main class="main-container">
+        <nav class="sidebar">
+            <h3>Tarea finalizada: <span id="ready"></span></h3>
+            <ul id="namesList">
+            </ul>
+        </nav>
+        <div class="left-panel">
+            <h1 id="taskName">Flex-container</h1>
+            <img src="../public/img/PdfFlexbox_Página_02.jpg" alt="">
+            <h1>A jugar con las reglas de flex</h1>
+            <label class="selector" for="flexContainer">
+                .flex-container {
+            </label>
+            <textarea name="flexContainer" id="flexContainer" cols="30" rows="5"></textarea>
+            <div class="selector">}</div>
+            <!-- <label for="flexItem">
+                Flex-item {
+            </label>
+            <textarea name="flexItem" id="flexItem" cols="30" rows="10"></textarea>
+            <div>}</div> -->
+            <button id="taskFinished" class="hidden" data-task="flex-container">Listo</button>
+
+        </div>
+        <div class="fill-container relative">
+            <div class="absolute w-100">
+                <div class="background-flex-container" style="display: flex;">
+                    <div class="item background-item item-1">1</div>
+                    <div class="item background-item item-2">2</div>
+                    <div class="item background-item item-3">3</div>
+                    <div class="item background-item item-4">4</div>
+                    <div class="item background-item item-5">5</div>
+                    <div class="item background-item item-6">6</div>
+                </div>
+            </div>
+            <div class="absolute on-top w-100">
+                <div class="foreground-flex-container">
+                    <div class="item foreground-item  item-1">1</div>
+                    <div class="item foreground-item  item-2">2</div>
+                    <div class="item foreground-item  item-3">3</div>
+                    <div class="item foreground-item  item-4">4</div>
+                    <div class="item foreground-item  item-5">5</div>
+                    <div class="item foreground-item  item-6">6</div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
