@@ -23,8 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     );
                     selSelector = document.querySelector(`#flex-${item}`);
                 }
-                console.log('selItem', selItem);
-                console.log('selSelector', selSelector);
                 const cleanFlexContainer = selSelector.value.replace(/\s/g, '');
                 selItem.removeAttribute('style');
                 const attributes = cleanFlexContainer.split(';');
@@ -33,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     const value = attribute.split(':')[1];
                     selItem.style[property] = value;
                 }
-                // const x = foregroundFlexContainer.getBoundingClientRect().x;
-                // const y = foregroundFlexContainer.getBoundingClientRect().y;
 
                 // Check if items align
 

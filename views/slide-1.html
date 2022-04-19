@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -33,26 +33,32 @@
     </header>
     <main class="main-container">
         <nav class="sidebar">
-            <h3>Tarea finalizada: <span id="ready"></span></h3>
+            <h3>Tarea finalizada: <span id="ready"></span> </h3>
             <ul id="namesList">
             </ul>
         </nav>
-        <div class="left-panel">
-            <h1 id="taskName">Flex-container</h1>
-            <img src="../public/img/PdfFlexbox_Página_02.jpg" alt="">
-            <h1>A jugar con las reglas de flex</h1>
-            <label class="selector" for="flexContainer">
-                .flex-container {
-            </label>
-            <textarea name="flexContainer" id="flexContainer" cols="30" rows="5"></textarea>
-            <div class="selector">}</div>
-            <!-- <label for="flexItem">
-                Flex-item {
-            </label>
-            <textarea name="flexItem" id="flexItem" cols="30" rows="10"></textarea>
-            <div>}</div> -->
-            <button id="taskFinished" class="hidden" data-task="flex-container">Listo</button>
 
+        <div class="left-panel">
+            <h1 id="taskName">flex-container<button id="taskFinished" class="hidden" data-task="flex-container">Enviar
+                    completo</button></h1>
+            <img src="../public/img/PdfFlexbox_Página_02.jpg" alt="">
+            <div class="instructionsContainer">
+                <h1 id="instructions">Agrego 3 flex items y los acomodo como el ejemplo</h1>
+                <div class="createFlexItemContainer">
+                    <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="3">Flex-item 3</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="4">Flex-item 4</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="5">Flex-item 5</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="6">Flex-item 6</button>
+
+                </div>
+                <label class="selector" for="flexContainer">
+                    .flex-container {
+                </label>
+                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10"></textarea>
+                <div class="selector">}</div>
+            </div>
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
@@ -60,23 +66,16 @@
                     <div class="item background-item item-1">1</div>
                     <div class="item background-item item-2">2</div>
                     <div class="item background-item item-3">3</div>
-                    <div class="item background-item item-4">4</div>
-                    <div class="item background-item item-5">5</div>
-                    <div class="item background-item item-6">6</div>
                 </div>
             </div>
             <div class="absolute on-top w-100">
                 <div class="foreground-flex-container">
-                    <div class="item foreground-item  item-1">1</div>
-                    <div class="item foreground-item  item-2">2</div>
-                    <div class="item foreground-item  item-3">3</div>
-                    <div class="item foreground-item  item-4">4</div>
-                    <div class="item foreground-item  item-5">5</div>
-                    <div class="item foreground-item  item-6">6</div>
 
                 </div>
             </div>
         </div>
+
+
     </main>
 </body>
 

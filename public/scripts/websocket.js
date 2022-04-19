@@ -12,23 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
     initWebSocket();
 
     function initWebSocketsEvents() {
-        ws.onopen = function () {
+        ws.onopen = function (evtOpen) {
+            console.log('WebSocket connection opened');
+            console.log('evtOpen', evtOpen);
             connected = true;
         };
 
         ws.onmessage = function (evt) {
+            console.log('WebSocket message received:');
+            console.log('evt', evt);
             const data = JSON.parse(evt.data);
-            switch (data.type) {
-                case 'names':
-                    namesToSidebar(data.data);
-                    break;
-                default:
-                    console.log('Unknown message type:', data.type);
-            }
+            console.log('data', data);
         };
 
         ws.onclose = function () {
             connected = false;
+            console.log('WebSocket connection closed');
         };
 
         ws.onerror = function (error) {
@@ -37,19 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Populate sidebar with names
+    const namesList = document.querySelector('#namesList');
+    namesList.innerHTML = '';
+
     function namesToSidebar(data) {
-        const task = localStorage.getItem('task');
-        const namesList = document.querySelector('#namesList');
+        const currTask = localStorage.getItem('task');
         let ready = 0;
-        namesList.innerHTML = '';
-        data.forEach((data) => {
-            if (data[0] === task) {
-                const li = document.createElement('li');
-                li.textContent = data[1];
-                namesList.appendChild(li);
-                ready++;
-            }
-        });
+        // data.forEach((data) => {
+        //     if (data.task === currTask) {
+        //         const li = document.createElement('li');
+        //         li.textContent = data[1];
+        //         namesList.appendChild(li);
+        //         ready++;
+        //     }
+        // });
         document.querySelector('#ready').innerHTML = ready;
     }
 
@@ -57,15 +57,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const nameInput = document.querySelector('#nameInput');
     const setNameButton = document.querySelector('#setName');
     const name = localStorage.getItem('name');
-    const taskName = document.querySelector('#taskName');
-    localStorage.setItem('task', taskName.textContent);
+    const taskName =
+        document.querySelector('#taskFinished')?.attributes['data-task'].value;
+    localStorage.setItem('task', taskName);
     if (!name) localStorage.setItem('name', 'Invitado');
     if (setNameButton) {
         setNameButton.addEventListener('click', function () {
             const name = nameInput.value;
             localStorage.setItem('name', name);
             sendTaskFinished();
+            location.reload();
         });
+        if (localStorage.getItem('name') !== 'Invitado') {
+            nameInput.style.display = 'none';
+            setNameButton.style.display = 'none';
+            const welcome = document.querySelector('#welcome');
+            const logout = document.querySelector('#logout');
+            welcome.textContent = `Bienvenido ${localStorage.getItem('name')}`;
+            logout.addEventListener('click', function () {
+                localStorage.removeItem('name');
+                location.reload();
+            });
+            document.querySelector('.userNameContainer').style.display = 'flex';
+        }
     }
 
     // Send task finished flag to server
@@ -73,11 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (taskFinished) {
         taskFinished.addEventListener('click', sendTaskFinished);
     }
-    function sendTaskFinished() {
-        const task = localStorage.getItem('task');
+    async function sendTaskFinished() {
         const name = localStorage.getItem('name');
+        const task = localStorage.getItem('task');
         if (connected) {
-            ws.send(
+            await ws.send(
                 JSON.stringify({
                     action: 'onMessage',
                     name: name,

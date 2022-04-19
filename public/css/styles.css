@@ -96,7 +96,7 @@ body {
         background-color: #2e353f;
         padding: 1rem;
         margin: 1rem;
-        width: 10%;
+        width: min-content;
         border: var(--color-2) 5px dashed;
     }
 
@@ -141,6 +141,7 @@ body {
     font-weight: bold;
     color: var(--color-1);
     margin-bottom: 1rem;
+    display: inline;
 }
 
 .left-panel #nameInput {
@@ -154,8 +155,17 @@ body {
     margin-bottom: 1rem;
 }
 
+.userNameContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    display: none;
+}
+
 .left-panel #setName,
-.addFlexButton {
+.addFlexButton,
+.userNameContainer #logout,
+#taskFinished {
     align-items: center;
     background-color: initial;
     background-image: linear-gradient(#464d55, #25292e);
@@ -171,11 +181,11 @@ body {
         'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
-    font-size: 18px;
-    height: 52px;
+    font-size: 10px;
+    height: 26px;
     justify-content: center;
     line-height: 1;
-    margin: 0 0 2rem;
+    /* margin: 0 0 2rem; */
     outline: none;
     overflow: hidden;
     padding: 0 32px;
@@ -190,26 +200,38 @@ body {
     touch-action: manipulation;
 }
 
+#taskFinished {
+    background-image: linear-gradient(#2c9051, #0b8700);
+    font-size: 16px;
+    height: 24px;
+    margin-left: 1rem;
+}
+
 .left-panel #setName:hover,
-.addFlexButton {
+.addFlexButton:hover,
+.userNameContainer #logout:hover,
+#taskFinished:hover {
     box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
     opacity: 0.85;
 }
 
 .left-panel #setName:active,
-.addFlexButton {
+.addFlexButton:active,
+.userNameContainer #logout:active {
     outline: 0;
 }
 
 .left-panel #setName:focus,
-.addFlexButton {
+.addFlexButton:focus,
+.userNameContainer #logout:focus {
     box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
 }
 
 @media (max-width: 420px) {
     .left-panel #setName,
-    .addFlexButton {
-        height: 48px;
+    .addFlexButton,
+    .userNameContainer #logout {
+        height: 16px;
     }
 }
 
@@ -259,6 +281,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 1rem;
+    width: auto;
+}
+
+.addFlexButton {
+    margin: 0 0.5rem 0.5rem;
 }
 
 .fill-container {
@@ -277,6 +304,7 @@ body {
     position: relative;
     margin-top: 1rem;
     height: auto;
+    max-height: 500px;
 }
 .absolute {
     position: absolute;

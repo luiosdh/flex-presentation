@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../public/scripts/flex-script.js"></script>
     <script src="../public/scripts/websocket.js"></script>
-    <title>flex-container</title>
+    <script src="../public/scripts/sidebar.js"></script>
+
+    <title>flex-grow</title>
 </head>
 
 <body>
     <header>
 
         <ul class="header">
+            <button class="burger-sidebar"><i class="fa fa-bars"></i></button>
             <li><a href="../index.html">flex-home</a></li>
             <li><a href="/views/slide-1.html">flex-container</a></li>
             <li><a href="/views/slide-2.html">ejes en Flexbox</a></li>
@@ -28,39 +32,51 @@
 
     </header>
     <main class="main-container">
+        <nav class="sidebar">
+            <h3>Tarea finalizada: <span id="ready"></span> </h3>
+            <ul id="namesList">
+            </ul>
+        </nav>
+
         <div class="left-panel">
-            Status: <span id="status">Not initialized</span>
-            <hr />
+            <h1 id="taskName">flex-grow<button id="taskFinished" class="hidden" data-task="flex-grow">Enviar
+                    completo</button></h1>
             <img src="../public/img/PdfFlexbox_Página_09.jpg" alt="">
-            <h1>A jugar con las reglas de flex</h1>
-            <label for="flexContainer">
-                .flex-container {
-            </label>
-            <textarea name="flexContainer" id="flexContainer" cols="30" rows="5"></textarea>
-            <div>}</div>
-            <!-- <label for="flexItem">
-                Flex-item {
-            </label>
-            <textarea name="flexItem" id="flexItem" cols="30" rows="10"></textarea>
-            <div>}</div> -->
+            <div class="instructionsContainer">
+                <h1 id="instructions">Sigamos el ejemplo de la diapositiva</h1>
+                <div class="createFlexItemContainer">
+                    <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="3">Flex-item 3</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="4">Flex-item 4</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="5">Flex-item 5</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="6">Flex-item 6</button>
+                </div>
+                <label class="selector" for="flexContainer">
+                    .flex-container {
+                </label>
+                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10"></textarea>
+                <div class="selector">}</div>
+            </div>
         </div>
         <div class="fill-container relative">
-            <!-- <div class="absolute w-100">
-                <div class="background-flex-container">
-                    <div class="item background-item item-1">1</div>
-                    <div class="item background-item item-2">2</div>
-                    <div class="item background-item item-3">3</div>
+            <div class="absolute w-100">
+                <div class="background-flex-container" style="display: flex; align-items: center;">
+                    <div class="item background-item item-1" style="flex-grow: 0;">1</div>
+                    <div class="item background-item item-2" style="flex-grow: 0;">2</div>
+                    <div class="item background-item item-3" style="flex-grow: 0.75;">3</div>
+                    <div class="item background-item item-4" style="flex-grow: 0;">4</div>
+                    <div class="item background-item item-5" style="flex-grow: 0.25;">5</div>
                 </div>
-            </div> -->
+            </div>
             <div class="absolute on-top w-100">
                 <div class="foreground-flex-container">
-                    <div class="item foreground-item  item-1">1</div>
-                    <div class="item foreground-item  item-2">2</div>
-                    <div class="item foreground-item  item-3">3</div>
 
                 </div>
             </div>
         </div>
+
+
     </main>
 </body>
 
