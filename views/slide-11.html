@@ -9,7 +9,7 @@
     <script src="../public/scripts/flex-script.js"></script>
 
 
-    <title>flex-direction</title>
+    <title>70 / 30</title>
 </head>
 
 <body>
@@ -18,15 +18,12 @@
         <ul class="header">
 
             <li><a href="../index.html">flex-home</a></li>
-            <li><a href="/views/slide-1.html">flex-container</a></li>
-            <li><a href="/views/slide-2.html">ejes en Flexbox</a></li>
-            <li><a href="/views/slide-3.html">flex-direction</a></li>
-            <li><a href="/views/slide-4.html">flex-wrap</a></li>
-            <li><a href="/views/slide-5.html">justify-content</a></li>
-            <li><a href="/views/slide-6.html">align-items</a></li>
-            <li><a href="/views/slide-7.html">flex-items</a></li>
-            <li><a href="/views/slide-8.html">flex-grow</a></li>
-            <li><a href="/views/slide-9.html">align-self</a></li>
+            <li><a href="/views/slide-10.html">¡Desafíos extra!</a></li>
+            <li><a href="/views/slide-11.html">70 / 30</a></li>
+            <li><a href="/views/slide-12.html">4 por línea</a></li>
+            <li><a href="/views/slide-13.html">2 por línea</a></li>
+            <li><a href="/views/slide-14.html">¡Random!</a></li>
+
         </ul>
 
     </header>
@@ -34,11 +31,10 @@
 
 
         <div class="left-panel">
-            <h1 id="taskName">flex-direction<button id="taskFinished" class="hidden"
-                    data-task="flex-direction">Correcto!</button></h1>
-            <img src="../public/img/PdfFlexbox_Página_04.jpg" alt="">
+            <h1 id="taskName">70 / 30<button id="taskFinished" class="hidden" data-task="7030">Correcto!</button>
+            </h1>
             <div class="instructionsContainer">
-                <h1 id="instructions">Agrego 3 flex items y los acomodo como el ejemplo</h1>
+                <h1 id="instructions">Una buena proporción... </h1>
                 <div class="createFlexItemContainer">
                     <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
                     <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
@@ -56,10 +52,11 @@
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="background-flex-container" style="display:flex; flex-direction: column-reverse;">
-                    <div class="item background-item item-1">1</div>
-                    <div class="item background-item item-2">2</div>
-                    <div class="item background-item item-3">3</div>
+                <div class="background-flex-container" style="display: flex; align-items: center; ">
+                    <div class="item background-item item-1"
+                        style="width: 30%; min-width: min-content; white-space: nowrap;">1 largo
+                    </div>
+                    <div class="item background-item item-2" style="width: 70%;">2</div>
                 </div>
             </div>
             <div class="absolute on-top w-100">
