@@ -63,8 +63,7 @@ body {
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    /* height: calc(100% - 20vh); */
-    height: auto;
+    height: 100%;
     margin: auto;
     justify-content: center;
 }
