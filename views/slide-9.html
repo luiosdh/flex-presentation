@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../public/scripts/flex-script.js"></script>
@@ -37,7 +38,8 @@
         <div class="left-panel">
             <h1 id="taskName">align-self<button id="taskFinished" class="hidden"
                     data-task="align-self">Correcto!</button></h1>
-            <img src="../public/img/PdfFlexbox_Página_10.jpg" alt="">
+            <button id="toggleImg">Cerrar imagen</button>
+            <img src="../public/img/PdfFlexbox_Página_10.jpg" alt="" id="img">
             <div class="instructionsContainer">
                 <h1 id="instructions">Agrego 4 flex items y los acomodo como el ejemplo</h1>
                 <div class="createFlexItemContainer">
@@ -53,6 +55,7 @@
                 </label>
                 <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10"></textarea>
                 <div class="selector">}</div>
+                <div id="flex-items-input-container"></div>
             </div>
         </div>
         <div class="fill-container relative">

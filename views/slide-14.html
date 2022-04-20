@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../public/scripts/flex-script.js"></script>
 
 
-    <title>align-self</title>
+    <title>Recursos extra</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <li><a href="/views/slide-11.html">70 / 30</a></li>
             <li><a href="/views/slide-12.html">4 por línea</a></li>
             <li><a href="/views/slide-13.html">2 por línea</a></li>
-            <li><a href="/views/slide-14.html">¡Random!</a></li>
+            <li><a href="/views/slide-14.html">Recursos extra</a></li>
 
         </ul>
 
@@ -31,35 +32,33 @@
 
 
         <div class="left-panel">
-            <h1 id="taskName">¡Desafíos extra!</h1>
+            <h1 id="taskName">Recursos extra</h1>
             <div class="instructionsContainer">
-                <h1 id="instructions">A continuación una serie de desafíos para practicar para nuestra practica del día.
-                    En este primero debés dividir la pantalla en 4 sectores. </h1>
-                <div class="createFlexItemContainer" style="display: flex; ">
-                    <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="3">Flex-item 3</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="4">Flex-item 4</button>
-                </div>
-                <label class="selector" for="flexContainer">
-                    .flex-container {
-                </label>
-                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10"></textarea>
-                <div class="selector">}</div>
+                <h1 id="instructions">Podés encontrar recursos y sitios de interés sobre flexbox en los hipervínculos de
+                    los flex items </h1>
             </div>
+            <img src="../public/img/flexbox-css-1200x600.png" alt="" id="img" id="img">
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="background-flex-container" style="display: flex; justify-content: flex-end; ">
-                    <div class="item background-item item-1" style="align-self: flex-start; flex-grow: 1;">1</div>
-                    <div class="item background-item item-2" style="align-self: center;">2</div>
-                    <div class="item background-item item-3" style="align-self: flex-end;">3</div>
-                    <div class="item background-item item-4">4</div>
-                </div>
-            </div>
-            <div class="absolute on-top w-100">
-                <div class="foreground-flex-container">
+                <div class="background-flex-container" style="display: flex; flex-direction: column;">
+                    <div class="item foreground-item item-1" style="width: 100%;"><a
+                            href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">
+                            MDN
 
+                        </a></div>
+                    <div class="item foreground-item item-2" style="width: 100%;"><a
+                            href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">
+                            W3Schools
+                        </a></div>
+                    <div class="item foreground-item item-3" style="width: 100%;"><a
+                            href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">
+                            CheatSheet
+                        </a></div>
+                    <div class="item foreground-item item-4" style="width: 100%;"><a
+                            href="https://mastery.games/flexboxzombies/" target="_blank">
+                            Zombies
+                        </a></div>
                 </div>
             </div>
         </div>

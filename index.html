@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -33,39 +33,75 @@
 
 
         <div class="left-panel">
-            <h1 id="taskName">Home</h1>
+            <h1 id="taskName">Home<button id="taskFinished" class="hidden" data-task="7030">Correcto!</button></h1>
 
             <div class="instructionsContainer">
-                <h1 id="instructions">Esta primera diapositiva es para que juegues con las posibilidades de la consola
-                    de
-                    CSS</h1>
+                <h1 id="instructions">Comencemos con flexbox</h1>
+                <div class="createFlexItemContainer">
+                    <button role="button" class="createFlexItem addFlexButton" id="1" disabled>Flex-item 1</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="2" disabled>Flex-item 2</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="3" disabled>Flex-item 3</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="4" disabled>Flex-item 4</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="5">Flex-item 5</button>
+                    <button role="button" class="createFlexItem addFlexButton" id="6">Flex-item 6</button>
+                </div>
                 <label class="selector" for="flexContainer">
                     .flex-container {
                 </label>
-                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10"></textarea>
+                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10">
+display:flex;
+align-items: center; 
+justify-content: center;</textarea>
                 <div class="selector">}</div>
-            </div>
-            <div class="createFlexItemContainer">
-                <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
-                <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
-                <button role="button" class="createFlexItem addFlexButton" id="3">Flex-item 3</button>
-                <button role="button" class="createFlexItem addFlexButton" id="4">Flex-item 4</button>
-                <button role="button" class="createFlexItem addFlexButton" id="5">Flex-item 5</button>
-                <button role="button" class="createFlexItem addFlexButton" id="6">Flex-item 6</button>
+                <div id="flex-items-input-container">
+                    <div class="instructions instructions-item-1">
+                        <label class="selector" for="flexItem">
+                            Flex-item-1 {
+                        </label>
+                        <textarea name="item-1" id="flex-item-1" cols="30" rows="10" class="flexProperties"></textarea>
+                        <div class="selector">}</div>
+                    </div>
+                    <div class="instructions instructions-item-2">
+                        <label class="selector" for="flexItem">
+                            Flex-item-2 {
+                        </label>
+                        <textarea name="item-2" id="flex-item-2" cols="30" rows="10" class="flexProperties"></textarea>
+                        <div class="selector">}</div>
+                    </div>
+                    <div class="instructions instructions-item-3">
+                        <label class="selector" for="flexItem">
+                            Flex-item-3 {
+                        </label>
+                        <textarea name="item-3" id="flex-item-3" cols="30" rows="10" class="flexProperties"></textarea>
+                        <div class="selector">}</div>
+                    </div>
+                    <div class="instructions instructions-item-4">
+                        <label class="selector" for="flexItem">
+                            Flex-item-4 {
+                        </label>
+                        <textarea name="item-4" id="flex-item-4" cols="30" rows="10" class="flexProperties"></textarea>
+                        <div class="selector">}</div>
+                    </div>
+                </div>
             </div>
 
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="background-flex-container">
-                    <div class="item background-item item-1">1</div>
-                    <div class="item background-item item-2">2</div>
-                    <div class="item background-item item-3">3</div>
+                <div class="background-flex-container"
+                    style="display: flex;justify-content: center;align-items: center;">
+                    <div class="item background-item item-1">FL</div>
+                    <div class="item background-item item-2">EX</div>
+                    <div class="item background-item item-3">BO</div>
+                    <div class="item background-item item-4">X!</div>
                 </div>
             </div>
             <div class="absolute on-top w-100">
                 <div class="foreground-flex-container">
-
+                    <div class="item foreground-item item-1">FL</div>
+                    <div class="item foreground-item item-2">EX</div>
+                    <div class="item foreground-item item-3">BO</div>
+                    <div class="item foreground-item item-4">X!</div>
                 </div>
             </div>
         </div>

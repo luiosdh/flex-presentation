@@ -165,7 +165,8 @@ body {
 .left-panel #setName,
 .addFlexButton,
 .userNameContainer #logout,
-#taskFinished {
+#taskFinished,
+#toggleImg {
     align-items: center;
     background-color: initial;
     background-image: linear-gradient(#464d55, #25292e);
@@ -210,27 +211,30 @@ body {
 .left-panel #setName:hover,
 .addFlexButton:hover,
 .userNameContainer #logout:hover,
-#taskFinished:hover {
+#taskFinished:hover,
+#toggleImg:hover {
     box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
     opacity: 0.85;
 }
 
 .left-panel #setName:active,
 .addFlexButton:active,
-.userNameContainer #logout:active {
+.userNameContainer #logout:active,
+#toggleImg:active {
     outline: 0;
 }
 
 .left-panel #setName:focus,
 .addFlexButton:focus,
-.userNameContainer #logout:focus {
+.userNameContainer #logout:focus #toggleImg:focus {
     box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
 }
 
 @media (max-width: 420px) {
     .left-panel #setName,
     .addFlexButton,
-    .userNameContainer #logout {
+    .userNameContainer #logout,
+    #toggleImg {
         height: 16px;
     }
 }
@@ -245,6 +249,14 @@ body {
 
 .left-panel img:hover {
     transform: scale(2) translate(6vw, 6vh);
+}
+
+#toggleImg {
+    margin-bottom: 1rem;
+}
+
+.collapsed {
+    display: none;
 }
 
 .left-panel .instructionsContainer {
@@ -286,6 +298,20 @@ body {
 
 .addFlexButton {
     margin: 0 0.5rem 0.5rem;
+}
+
+#flex-items-input-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#flex-items-input-container > div {
+    width: 45%;
+    margin: 0.5rem;
+}
+
+#flex-items-input-container > div > textarea {
+    width: 100%;
 }
 
 .fill-container {
@@ -337,6 +363,12 @@ body {
 
 .foreground-item {
     opacity: 0.6;
+}
+
+.foreground-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
 }
 
 .item {

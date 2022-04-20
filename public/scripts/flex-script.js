@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="selector">}</div> 
             `;
         document
-            .querySelector('.instructionsContainer')
+            .querySelector('#flex-items-input-container')
             .appendChild(instructions);
 
         addEvListener();
@@ -121,19 +121,16 @@ document.addEventListener('DOMContentLoaded', function () {
         instructions.remove();
     };
 
-    // const flexItem = document.querySelector('#flexItem');
-    // const foregroundItems = document.querySelectorAll('.foreground-item');
-    // flexItem.addEventListener('input', () => {
-    //     const cleanFlexItem = flexItem.value.replace(/\s/g, '');
-    //     const attributes = cleanFlexItem.split(';');
-    //     for (let attribute of attributes) {
-    //         const property = attribute.split(':')[0];
-    //         const value = attribute.split(':')[1];
-    //         foregroundFlexContainer.style[property] = value;
-    //         for (let foregroundItem of foregroundItems) {
-    //             foregroundItem.removeAttribute('style');
-    //             foregroundFlexItem.style[property] = value;
-    //         }
-    //     }
-    // });
+    // Toggle img
+    const toggleImg = document.querySelector('#toggleImg');
+    const img = document.querySelector('#img');
+    toggleImg.addEventListener('click', () => {
+        if (img.classList.contains('collapsed')) {
+            img.classList.remove('collapsed');
+            toggleImg.innerHTML = 'Cerrar imagen';
+        } else {
+            img.classList.add('collapsed');
+            toggleImg.innerHTML = 'Abrir imagen';
+        }
+    });
 });
