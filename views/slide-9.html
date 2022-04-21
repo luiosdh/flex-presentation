@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../public/scripts/flex-script.js"></script>
+    <script src="../public/scripts/websocket.js"></script>
+    <script src="../public/scripts/sidebar.js"></script>
 
 
     <title>align-self</title>
@@ -17,6 +19,7 @@
     <header>
 
         <ul class="header">
+            <button class="burger-sidebar"><i class="fa fa-bars"></i></button>
 
             <li><a href="../index.html">flex-home</a></li>
             <li><a href="/views/slide-1.html">flex-container</a></li>
@@ -33,6 +36,11 @@
 
     </header>
     <main class="main-container">
+        <nav class="sidebar">
+            <h3>Tarea finalizada: <span id="ready"></span></h3>
+            <ul id="namesList">
+            </ul>
+        </nav>
 
 
         <div class="left-panel">

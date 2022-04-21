@@ -118,8 +118,13 @@ body {
         text-decoration: none;
         cursor: pointer;
         text-align: center;
-        color: #8e9846;
         width: 100%;
+    }
+    .ready {
+        color: #5c9846;
+    }
+    .working {
+        color: #8e9846;
     }
 }
 
