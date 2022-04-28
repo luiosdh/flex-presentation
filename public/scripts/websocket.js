@@ -7,17 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     activateFinishTaskNotificationListener();
 
     function setUserName() {
-        const nameInput = document.querySelector('#nameInput');
         const setNameButton = document.querySelector('#setName');
         const name = localStorage.getItem('name');
         if (!name) localStorage.setItem('name', 'Invitado');
         if (setNameButton) {
-            setNameButtonListener();
+            setNameButtonListener(setNameButton);
             displayStoredName();
         }
     }
 
-    function setNameButtonListener() {
+    function setNameButtonListener(setNameButton) {
         setNameButton.addEventListener('click', function () {
             const name = nameInput.value;
             localStorage.setItem('name', name);
@@ -29,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayStoredName() {
         if (localStorage.getItem('name') !== 'Invitado') {
+            const nameInput = document.querySelector('#nameInput');
+            const setNameButton = document.querySelector('#setName');
             nameInput.style.display = 'none';
             setNameButton.style.display = 'none';
             const welcome = document.querySelector('#welcome');
