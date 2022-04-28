@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../public/scripts/flex-script.js"></script>
+    <script src="../public/scripts/toggle-flex-items.js"></script>
+    <script src="../public/scripts/set-css-rules-from-input-field.js"></script>
+    <script src="../public/scripts/toggle-img.js"></script>
     <script src="../public/scripts/websocket.js"></script>
     <script src="../public/scripts/sidebar.js"></script>
 
@@ -33,7 +35,7 @@
     </header>
     <main class="main-container">
         <nav class="sidebar">
-            <h3>Tarea finalizada: <span id="ready"></span></h3>
+            <h3>Tarea finalizada: <span id="finished"></span></h3>
             <ul id="namesList">
             </ul>
         </nav>
@@ -49,25 +51,25 @@
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="background-flex-container" style="display: flex; flex-direction: column;">
-                    <div class="item foreground-item item-1" style="width: 100%;"><a
+                <div class="example-flex-container" style="display: flex; flex-direction: column;">
+                    <div class="item managed-item item-1" style="width: 100%;"><a
                             href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">
                             MDN
 
                         </a></div>
-                    <div class="item foreground-item item-2" style="width: 100%;"><a
+                    <div class="item managed-item item-2" style="width: 100%;"><a
                             href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">
                             W3Schools
                         </a></div>
-                    <div class="item foreground-item item-3" style="width: 100%;"><a
+                    <div class="item managed-item item-3" style="width: 100%;"><a
                             href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">
                             CheatSheet
                         </a></div>
-                    <div class="item foreground-item item-4" style="width: 100%;"><a
+                    <div class="item managed-item item-4" style="width: 100%;"><a
                             href="https://mastery.games/flexboxzombies/" target="_blank">
                             Zombies
                         </a></div>
-                    <div class="item foreground-item item-5" style="width: 100%;"><a
+                    <div class="item managed-item item-5" style="width: 100%;"><a
                             href="https://github.com/LuiosDyet/flex-presentation" target="_blank">
                             Esta presentación
                         </a></div>

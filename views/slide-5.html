@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../public/scripts/flex-script.js"></script>
+    <script src="../public/scripts/toggle-flex-items.js"></script>
+    <script src="../public/scripts/set-css-rules-from-input-field.js"></script>
+    <script src="../public/scripts/toggle-img.js"></script>
     <script src="../public/scripts/websocket.js"></script>
     <script src="../public/scripts/sidebar.js"></script>
 
@@ -37,15 +39,15 @@
     </header>
     <main class="main-container">
         <nav class="sidebar">
-            <h3>Tarea finalizada: <span id="ready"></span></h3>
+            <h3>Tarea finalizada: <span id="finished"></span></h3>
             <ul id="namesList">
             </ul>
         </nav>
 
 
         <div class="left-panel">
-            <h1 id="taskName">justify-content<button id="taskFinished" class="hidden"
-                    data-task="justify-content">Correcto!</button></h1>
+            <h1 id="taskName">justify-content<button id="finishTaskNotification" class="hidden"
+                    data-task="justify-content">¡Terminé! (enviar)</button></h1>
             <button id="toggleImg">Cerrar imagen</button>
             <img src="../public/img/PdfFlexbox_Página_06.jpg" alt="" id="img">
             <div class="instructionsContainer">
@@ -61,25 +63,26 @@
                 <label class="selector" for="flexContainer">
                     .flex-container {
                 </label>
-                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10"></textarea>
+                <textarea name="flexContainer" id="flexContainerRules" class="flexElementRules" cols="30"
+                    rows="10"></textarea>
                 <div class="selector">}</div>
                 <div id="flex-items-input-container"></div>
             </div>
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="background-flex-container"
+                <div class="example-flex-container"
                     style="display:flex; flex-wrap: wrap; justify-content: space-between;">
-                    <div class="item background-item item-1">1</div>
-                    <div class="item background-item item-2">2</div>
-                    <div class="item background-item item-3">3</div>
-                    <div class="item background-item item-4">4</div>
-                    <div class="item background-item item-5">5</div>
-                    <div class="item background-item item-6">6</div>
+                    <div class="item example-item item-1">1</div>
+                    <div class="item example-item item-2">2</div>
+                    <div class="item example-item item-3">3</div>
+                    <div class="item example-item item-4">4</div>
+                    <div class="item example-item item-5">5</div>
+                    <div class="item example-item item-6">6</div>
                 </div>
             </div>
             <div class="absolute on-top w-100">
-                <div class="foreground-flex-container">
+                <div class="managed-flex-container">
 
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/public/scripts/flex-script.js"></script>
+    <script src="/public/scripts/toggle-flex-items.js"></script>
+    <script src="/public/scripts/set-css-rules-from-input-field.js"></script>
+    <script src="/public/scripts/toggle-img.js"></script>
     <script src="/public/scripts/websocket.js"></script>
     <script src="/public/scripts/sidebar.js"></script>
 
@@ -37,15 +39,16 @@
     </header>
     <main class="main-container">
         <nav class="sidebar">
-            <h3>Tarea finalizada: <span id="ready"></span></h3>
+            <h3>Tarea finalizada: <span id="finished"></span></h3>
             <ul id="namesList">
             </ul>
         </nav>
 
 
         <div class="left-panel">
-            <h1 id="taskName">Home <button id="taskFinished" class="hidden" data-task="home">Enviar
-                    completo</button></h1>
+            <h1 id="taskName">Home <button id="finishTaskNotification" class="hidden" data-task="home">¡Terminé!
+                    (enviar)</button>
+            </h1>
             <input id="nameInput" type="text" placeholder="Ingresá con tu nombre o apodo">
             <button id="setName" role="button">Ingresar</button>
             <div class="userNameContainer">
@@ -65,7 +68,7 @@
                 <label class="selector" for="flexContainer">
                     .flex-container {
                 </label>
-                <textarea name="flexContainer" id="flexContainer" class="flexProperties" cols="30" rows="10">
+                <textarea name="flexContainer" id="flexContainerRules" class="flexElementRules" cols="30" rows="10">
 display:flex;
 align-items: center; 
 justify-content: center;</textarea>
@@ -75,28 +78,32 @@ justify-content: center;</textarea>
                         <label class="selector" for="flexItem">
                             Flex-item-1 {
                         </label>
-                        <textarea name="item-1" id="flex-item-1" cols="30" rows="10" class="flexProperties"></textarea>
+                        <textarea name="item-1" id="flex-item-1" cols="30" rows="10"
+                            class="flexElementRules"></textarea>
                         <div class="selector">}</div>
                     </div>
                     <div class="instructions instructions-item-2">
                         <label class="selector" for="flexItem">
                             Flex-item-2 {
                         </label>
-                        <textarea name="item-2" id="flex-item-2" cols="30" rows="10" class="flexProperties"></textarea>
+                        <textarea name="item-2" id="flex-item-2" cols="30" rows="10"
+                            class="flexElementRules"></textarea>
                         <div class="selector">}</div>
                     </div>
                     <div class="instructions instructions-item-3">
                         <label class="selector" for="flexItem">
                             Flex-item-3 {
                         </label>
-                        <textarea name="item-3" id="flex-item-3" cols="30" rows="10" class="flexProperties"></textarea>
+                        <textarea name="item-3" id="flex-item-3" cols="30" rows="10"
+                            class="flexElementRules"></textarea>
                         <div class="selector">}</div>
                     </div>
                     <div class="instructions instructions-item-4">
                         <label class="selector" for="flexItem">
                             Flex-item-4 {
                         </label>
-                        <textarea name="item-4" id="flex-item-4" cols="30" rows="10" class="flexProperties"></textarea>
+                        <textarea name="item-4" id="flex-item-4" cols="30" rows="10"
+                            class="flexElementRules"></textarea>
                         <div class="selector">}</div>
                     </div>
                 </div>
@@ -105,20 +112,19 @@ justify-content: center;</textarea>
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="background-flex-container"
-                    style="display: flex;justify-content: center;align-items: center;">
-                    <div class="item background-item item-1">FL</div>
-                    <div class="item background-item item-2">EX</div>
-                    <div class="item background-item item-3">BO</div>
-                    <div class="item background-item item-4">X!</div>
+                <div class="example-flex-container" style="display: flex;justify-content: center;align-items: center;">
+                    <div class="item example-item item-1">FL</div>
+                    <div class="item example-item item-2">EX</div>
+                    <div class="item example-item item-3">BO</div>
+                    <div class="item example-item item-4">X!</div>
                 </div>
             </div>
             <div class="absolute on-top w-100">
-                <div class="foreground-flex-container">
-                    <div class="item foreground-item item-1">FL</div>
-                    <div class="item foreground-item item-2">EX</div>
-                    <div class="item foreground-item item-3">BO</div>
-                    <div class="item foreground-item item-4">X!</div>
+                <div class="managed-flex-container">
+                    <div class="item managed-item item-1">FL</div>
+                    <div class="item managed-item item-2">EX</div>
+                    <div class="item managed-item item-3">BO</div>
+                    <div class="item managed-item item-4">X!</div>
                 </div>
             </div>
         </div>

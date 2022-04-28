@@ -5,6 +5,16 @@ let apiGatewayManagementApi;
 const tableName = 'participants';
 const apiVersion = '2018-11-29';
 
+exports.handler = async (event, context, callback) => {
+    initApiGatewayManagementApi(event);
+    await storeInDb(event);
+    const connections = await getConnections();
+    connections.Items.forEach(async function (connection) {
+        await send(connection.connectionId, event);
+    });
+    callback(null, { statusCode: 200 });
+};
+
 function initApiGatewayManagementApi(event) {
     apiGatewayManagementApi = new AWS.ApiGatewayManagementApi({
         apiVersion,
@@ -13,13 +23,14 @@ function initApiGatewayManagementApi(event) {
     });
 }
 
-function setName(event) {
+function storeInDb(event) {
     return ddb
         .put({
             TableName: tableName,
             Item: {
                 connectionId: event.requestContext.connectionId,
                 name: JSON.parse(event.body).name,
+                task: JSON.parse(event.body).task,
             },
         })
         .promise();
@@ -29,27 +40,19 @@ function getConnections() {
     return ddb.scan({ TableName: tableName }).promise();
 }
 
-async function send(connectionId, data) {
+async function send(connectionId, event) {
     if (apiGatewayManagementApi) {
         await apiGatewayManagementApi
             .postToConnection({
                 ConnectionId: connectionId,
                 Data: JSON.stringify({
-                    type: 'names',
-                    names: data.Items.map((item) => item.name),
+                    info: {
+                        connectionId: event.requestContext.connectionId,
+                        name: JSON.parse(event.body).name,
+                        task: JSON.parse(event.body).task,
+                    },
                 }),
             })
             .promise();
     }
 }
-
-exports.handler = async (event, context, callback) => {
-    console.log(event);
-    initApiGatewayManagementApi(event);
-    await setName(event);
-    const data = await getConnections();
-    data.Items.forEach(async function (connection) {
-        await send(connection.connectionId, data);
-    });
-    callback(null, { statusCode: 200 });
-};

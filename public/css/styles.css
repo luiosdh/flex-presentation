@@ -124,7 +124,7 @@ body {
         color: #5c9846;
     }
     .working {
-        color: #8e9846;
+        color: #984646;
     }
 }
 
@@ -169,7 +169,7 @@ body {
 .left-panel #setName,
 .addFlexButton,
 .userNameContainer #logout,
-#taskFinished,
+#finishTaskNotification,
 #toggleImg {
     align-items: center;
     background-color: initial;
@@ -205,7 +205,7 @@ body {
     touch-action: manipulation;
 }
 
-#taskFinished {
+#finishTaskNotification {
     background-image: linear-gradient(#2c9051, #0b8700);
     font-size: 16px;
     height: 24px;
@@ -215,7 +215,7 @@ body {
 .left-panel #setName:hover,
 .addFlexButton:hover,
 .userNameContainer #logout:hover,
-#taskFinished:hover,
+#finishTaskNotification:hover,
 #toggleImg:hover {
     box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
     opacity: 0.85;
@@ -349,27 +349,27 @@ body {
     z-index: 1;
 }
 
-.foreground-flex-container,
-.background-flex-container {
+.managed-flex-container,
+.example-flex-container {
     height: 100%;
     width: 100%;
 }
 
-.foreground-item,
-.background-item {
+.managed-item,
+.example-item {
     /* height: 100px; */
     width: 100px;
 }
 
-.background-item {
+.example-item {
     opacity: 0.2;
 }
 
-.foreground-item {
+.managed-item {
     opacity: 0.6;
 }
 
-.foreground-item a {
+.managed-item a {
     color: white;
     text-decoration: none;
     font-size: 3rem;
