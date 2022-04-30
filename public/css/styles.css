@@ -15,12 +15,6 @@ html {
     width: 100vw;
     margin: auto;
     background-color: #2e353f;
-    /* background: rgb(169, 150, 113);
-    background: linear-gradient(
-        0deg,
-        rgba(169, 150, 113, 1) 0%,
-        rgba(255, 228, 171, 1) 100%
-    ); */
 }
 
 body {
@@ -190,7 +184,6 @@ body {
     height: 26px;
     justify-content: center;
     line-height: 1;
-    /* margin: 0 0 2rem; */
     outline: none;
     overflow: hidden;
     padding: 0 32px;
@@ -357,7 +350,6 @@ body {
 
 .managed-item,
 .example-item {
-    /* height: 100px; */
     width: 100px;
 }
 
