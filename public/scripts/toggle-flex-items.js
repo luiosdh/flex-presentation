@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (flexItem) {
                 deleteFlexItem(flexItem);
                 deleteFlexInstructions(flexItem);
-                setCssRulesFromInputField();
             } else {
                 createFlexItem(this.id);
                 createFlexInstruction(this.id);
+                setCssRulesFromInputField();
+                console.log('acá');
             }
         });
     }
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <label class="selector" for="flexItem">
                 Flex-item-${className} {
             </label>
-            <textarea name="item-${className}" id="flex-item-${className}" cols="30" rows="10" class="flexElement"></textarea>
+            <textarea name="item-${className}" id="flex-item-${className}" cols="30" rows="10" class="flexElementRules"></textarea>
             <div class="selector">}</div> 
             `;
         document

@@ -4,7 +4,7 @@
 
 ## Sobre la actividad
 
-Este proyecto es una presentación interactiva de los conceptos de flexbox. Es una herramienta para la clase sincrónica donde se busca mayor dinamismo y entretenimiento así como la posibilidad de realizar un diagnóstico continuo de la práctica.
+Este proyecto es una presentación interactiva de los conceptos de flexbox. Es una herramienta para la clase sincrónica donde se busca mayor dinamismo y compromiso así como la posibilidad de realizar un diagnóstico continuo de la práctica.
 
 ## Sobre el código
 
@@ -12,9 +12,9 @@ Los invito a investigar un poco y comprender como funciona. Casi todo lo que se 
 
 ### Backend
 
-A diferir de lo que se ha visto en el curso, el backend de este proyecto no está armado sobre express sino que se encuentra en la carpeta lambda. En la carpeta encontrarán 3 módulos. Cada uno son funciones que se ejecutan en AWS Lambda y aprovechan la función de websocket que provee AWS API Gateway.
+Difiriendo de lo que se ha visto en el curso, el backend de este proyecto no está armado sobre express sino que se encuentra en la carpeta lambda. En la carpeta encontrarán 3 módulos. Cada uno son funciones que se ejecutan en AWS Lambda y aprovechan la función de websocket que provee AWS API Gateway.
 
-En resumen, websocket es una tecnología que nos permite establecer una conexión continua entre el cliente y el servidor siendo de utilidad en este proyecto para poder enviar que la tarea se ha realizado correctamente inmediatamente al resto de los usuarios. Similar a un chat grupal. Esto no se verá en el curso pero pueden investigarlo por su cuenta por ejemplo en [mdn](https://developer.mozilla.org/es/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications).
+En resumen, websocket es una tecnología que nos permite establecer una conexión continua entre el cliente y el servidor siendo de utilidad en este proyecto para poder enviar como mensaje que la tarea se ha realizado correctamente inmediatamente al resto de los usuarios. Similar a un chat grupal. Esto no se verá en el curso pero pueden investigarlo por su cuenta por ejemplo en [mdn](https://developer.mozilla.org/es/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications).
 
 ### Scripts
 

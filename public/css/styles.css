@@ -89,7 +89,8 @@ body {
         background-color: #2e353f;
         padding: 1rem;
         margin: 1rem;
-        width: min-content;
+        width: max-content;
+        max-width: 200px;
         border: var(--color-2) 5px dashed;
     }
 
