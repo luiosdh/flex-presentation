@@ -44,15 +44,16 @@ body {
     margin: 5px;
     padding: 5px;
     text-decoration: none;
-    cursor: pointer;
+
     border: var(--color-2) 5px dashed;
-    flex-grow: 1;
+    flex: 1 0 160px;
     text-align: center;
 }
 
 .header a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 .main-container {
     display: flex;
@@ -76,7 +77,6 @@ body {
         text-decoration: none;
         cursor: pointer;
         border: var(--color-2) 5px dashed;
-        flex-grow: 1;
         text-align: center;
         background-color: #2e353f;
         color: white;
@@ -327,8 +327,7 @@ body {
     border: salmon 10px dashed;
     position: relative;
     margin-top: 1rem;
-    height: auto;
-    max-height: 500px;
+    max-height: 608px;
 }
 .absolute {
     position: absolute;
