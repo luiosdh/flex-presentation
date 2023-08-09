@@ -1,0 +1,16 @@
+{
+  "name": "flex-presentation",
+  "version": "1.0.0",
+  "description": "![digital-house](https://user-images.githubusercontent.com/81197487/166121694-0ecf8adc-7dc5-4809-9223-ff72edebc779.gif)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

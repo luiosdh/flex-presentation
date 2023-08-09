@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../public/scripts/toggle-flex-items.js"></script>
-    <script src="../public/scripts/set-css-rules-from-input-field.js"></script>
-    <script src="../public/scripts/toggle-img.js"></script>
-    <script src="../public/scripts/websocket.js"></script>
-    <script src="../public/scripts/sidebar.js"></script>
+    <script src="/scripts/toggle-flex-items.js"></script>
+    <script src="/scripts/set-css-rules-from-input-field.js"></script>
+    <script src="/scripts/toggle-img.js"></script>
+    <script src="/scripts/websocket.js"></script>
+    <script src="/scripts/sidebar.js"></script>
 
 
-    <title>2 por línea</title>
+    <title>flex-container</title>
 </head>
 
 <body>
@@ -23,13 +23,17 @@
         <ul class="header">
             <button class="burger-sidebar"><i class="fa fa-bars"></i></button>
 
-            <li><a href="../index.html">flex-home</a></li>
-            <li><a href="/views/slide-10.html">¡Desafíos extra!</a></li>
-            <li><a href="/views/slide-11.html">70 / 30</a></li>
-            <li><a href="/views/slide-12.html">4 por línea</a></li>
-            <li><a href="/views/slide-13.html">2 por línea</a></li>
-            <li><a href="/views/slide-14.html">Recursos extra</a></li>
-
+            <li><a href="/">flex-home</a></li>
+            <li><a href="/slide-1">flex-container</a></li>
+            <li><a href="/slide-2">ejes en Flexbox</a></li>
+            <li><a href="/slide-3">flex-direction</a></li>
+            <li><a href="/slide-4">flex-wrap</a></li>
+            <li><a href="/slide-5">justify-content</a></li>
+            <li><a href="/slide-6">align-items</a></li>
+            <li><a href="/slide-7">flex-items</a></li>
+            <li><a href="/slide-8">flex-grow</a></li>
+            <li><a href="/slide-9">align-self</a></li>
+            <li><a href="/slide-10">Desafíos extra!</a></li>
         </ul>
 
     </header>
@@ -42,12 +46,13 @@
 
 
         <div class="left-panel">
-            <h1 id="taskName">2 por línea<button id="finishTaskNotification" class="hidden"
-                    data-task="2-por-linea">¡Terminé!
-                    (enviar)</button></h1>
+            <h1 id="taskName">flex-container<button id="finishTaskNotification" class="hidden"
+                    data-task="flex-container">¡Terminé!
+                </button></h1>
+            <button id="toggleImg">Cerrar imagen</button>
+            <img src="/img/PdfFlexbox_Página_02.jpg" alt="" id="img">
             <div class="instructionsContainer">
-                <h2 id="instructions">¿y dos? ¿Cómo combinarías ambas para que muestre 2 o 4 dependiendo del tamaño de
-                    pantalla?</h2>
+                <h2 id="instructions">Agrego 3 flex items y los acomodo como el ejemplo</h2>
                 <div class="createFlexItemContainer">
                     <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
                     <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
@@ -55,6 +60,7 @@
                     <button role="button" class="createFlexItem addFlexButton" id="4">Flex-item 4</button>
                     <button role="button" class="createFlexItem addFlexButton" id="5">Flex-item 5</button>
                     <button role="button" class="createFlexItem addFlexButton" id="6">Flex-item 6</button>
+
                 </div>
                 <label class="selector" for="flexContainer">
                     .flex-container {
@@ -67,9 +73,10 @@
         </div>
         <div class="fill-container relative">
             <div class="absolute w-100">
-                <div class="example-flex-container" style="display: flex;  ">
-                    <div class="item example-item item-1" style="width: 50%;">1</div>
-                    <div class="item example-item item-2" style="width: 50%;">2</div>
+                <div class="example-flex-container" style="display: flex;">
+                    <div class="item example-item item-1">1</div>
+                    <div class="item example-item item-2">2</div>
+                    <div class="item example-item item-3">3</div>
                 </div>
             </div>
             <div class="absolute on-top w-100">
